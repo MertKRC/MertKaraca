@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mert Karaca — Technical Support & Operations Specialist</title>
+  <meta name="description"
+    content="Personal Portfolio & CV of Mert Karaca. Customer Support & Technical Operations Specialist with 5+ years of experience in hardware/software troubleshooting, web technologies, and customer operations.">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Fixed Fullscreen Canvas Background Animation -->
+  <div class="canvas-container">
+    <canvas id="hero-canvas"></canvas>
+    <div class="canvas-overlay"></div>
+  </div>
+
+  <!-- Minimal Top Loading Line -->
+  <div id="loader" class="loader">
+    <div class="loader-bar">
+      <div id="loader-progress" class="loader-progress"></div>
+    </div>
+  </div>
+
+  <!-- Main Website Content Laid Over Scroll Animation -->
+  <div class="page-wrapper">
+    <!-- Header & Navigation -->
+    <header class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="brand-logo">
+          <div class="logo-image-wrap">
+            <img src="assets/logo.jpg" alt="Mert Karaca Logo" class="logo-img">
+          </div>
+          <div class="logo-text">
+            <span>Mert Karaca</span>
+            <span class="status-indicator">
+              <span class="status-dot"></span>
+              <span data-i18n="status_available">Available for Opportunities</span>
+            </span>
+          </div>
+        </a>
+
+        <nav class="nav-links" id="nav-links">
+          <a href="#home" class="nav-link active" data-i18n="nav_home">Home</a>
+          <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+          <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
+          <a href="#experience" class="nav-link" data-i18n="nav_experience">Experience</a>
+          <a href="#education" class="nav-link" data-i18n="nav_education">Education</a>
+          <a href="projects.html" class="nav-link" data-i18n="nav_projects">Projects</a>
+          <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <!-- Flag-Based Language Switcher -->
+          <div class="lang-switcher" id="lang-switcher">
+            <!-- English Flag Button -->
+            <button class="lang-flag-btn active" data-lang="en" title="Switch to English" aria-label="English">
+              <svg class="flag-svg" viewBox="0 0 32 32" width="24" height="24">
+                <clipPath id="uk-flag-clip">
+                  <circle cx="16" cy="16" r="14.5" />
+                </clipPath>
+                <g clip-path="url(#uk-flag-clip)">
+                  <rect width="32" height="32" fill="#012169" />
+                  <path d="M0 0 L32 32 M32 0 L0 32" stroke="#ffffff" stroke-width="4.5" />
+                  <path d="M0 0 L32 32 M32 0 L0 32" stroke="#C8102E" stroke-width="2.2" />
+                  <path d="M16 0 V32 M0 16 H32" stroke="#ffffff" stroke-width="6.5" />
+                  <path d="M16 0 V32 M0 16 H32" stroke="#C8102E" stroke-width="3.8" />
+                </g>
+                <circle cx="16" cy="16" r="14.5" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.2" />
+              </svg>
+            </button>
+
+            <!-- Turkish Flag Button -->
+            <button class="lang-flag-btn" data-lang="tr" title="Türkçe'ye Geç" aria-label="Türkçe">
+              <svg class="flag-svg" viewBox="0 0 32 32" width="24" height="24">
+                <clipPath id="tr-flag-clip">
+                  <circle cx="16" cy="16" r="14.5" />
+                </clipPath>
+                <g clip-path="url(#tr-flag-clip)">
+                  <rect width="32" height="32" fill="#E30A17" />
+                  <circle cx="12.5" cy="16" r="7.5" fill="#ffffff" />
+                  <circle cx="14.8" cy="16" r="6" fill="#E30A17" />
+                  <polygon
+                    points="20.5,13.2 21.5,15.3 23.8,15.5 22.0,17.0 22.6,19.3 20.5,18.0 18.4,19.3 19.0,17.0 17.2,15.5 19.5,15.3"
+                    fill="#ffffff" transform="rotate(-15 20.5 16)" />
+                </g>
+                <circle cx="16" cy="16" r="14.5" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.2" />
+              </svg>
+            </button>
+          </div>
+
+          <a href="#contact" class="btn-cv-download">
+            <span data-i18n="btn_get_in_touch">Get in Touch</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+
+          <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero-section">
+        <div class="hero-container">
+          <div class="hero-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+            <span data-i18n="hero_badge">Customer Support & Technical Operations Specialist</span>
+          </div>
+
+          <h1 class="hero-title">Mert<br><span class="gradient-text">Karaca</span></h1>
+
+          <p class="hero-tagline" data-i18n="hero_tagline">
+            Bridging deep technical knowledge with exceptional customer experiences. Specializing in hardware/software
+            support, multi-tier ticketing, and modern web technologies.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#contact" class="btn-primary">
+              <span data-i18n="btn_contact_me">Contact Me</span>
+              <div class="btn-arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </a>
+            <a href="#experience" class="btn-secondary">
+              <span data-i18n="btn_view_experience">View Experience</span>
+            </a>
+          </div>
+
+          <div class="hero-social-strip">
+            <span class="social-label" data-i18n="social_connect">Connect:</span>
+            <!-- GitHub Profile -->
+            <a href="https://github.com/MertKRC" target="_blank" rel="noopener noreferrer" class="social-pill"
+              aria-label="GitHub Profile">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+              </svg>
+              <span>GitHub</span>
+            </a>
+            <!-- LinkedIn Profile -->
+            <a href="https://www.linkedin.com/in/mertkrc/" target="_blank" rel="noopener noreferrer" class="social-pill"
+              aria-label="LinkedIn Profile">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            <!-- Email -->
+            <a href="mailto:mrtkrc41@gmail.com" class="social-pill" aria-label="Email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Summary Stats -->
+        <div class="hero-stats-grid">
+          <div class="stat-card">
+            <div class="stat-num">5+</div>
+            <div class="stat-title" data-i18n="stat1_title">Years Experience</div>
+            <div class="stat-sub" data-i18n="stat1_sub">Tech Support & Ops</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">3.36</div>
+            <div class="stat-title" data-i18n="stat2_title">Piri Reis GPA</div>
+            <div class="stat-sub" data-i18n="stat2_sub">Computer Programming</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">EN / TR</div>
+            <div class="stat-title" data-i18n="stat3_title">Multilingual</div>
+            <div class="stat-sub" data-i18n="stat3_sub">Fluent Technical Support</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">99.8%</div>
+            <div class="stat-title" data-i18n="stat4_title">SLA Compliance</div>
+            <div class="stat-sub" data-i18n="stat4_sub">Resolution Efficiency</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Me Section -->
+      <section id="about" class="content-section">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-tag" data-i18n="about_tag">About Me</span>
+            <h2 class="section-title" data-i18n="about_title">Passionate About Solving Complex Technical Challenges</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-bio-card">
+              <p class="about-lead" data-i18n="about_lead">
+                Hello! I am <strong>Mert Karaca</strong>, a versatile Technical Support & Operations Specialist with a
+                solid academic foundation in <strong>Computer Programming from Piri Reis University</strong>.
+              </p>
+              <p class="about-text" data-i18n="about_p1">
+                Over the past 5+ years, I have honed my expertise working with global enterprise organizations such as
+                <strong>Teleperformance</strong> and <strong>Conduent</strong>, diagnosing intricate hardware/software
+                anomalies, managing omnichannel ticketing queues, and ensuring high customer satisfaction.
+              </p>
+              <p class="about-text" data-i18n="about_p2">
+                With a background in software development (C#, ASP.NET, JavaScript, SQL), I serve as the ideal bridge
+                between technical engineering teams, product stakeholders, and end-users.
+              </p>
+            </div>
+
+            <div class="about-pillars">
+              <div class="pillar-card">
+                <div class="pillar-icon cyan">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                  </svg>
+                </div>
+                <div class="pillar-content">
+                  <h3 data-i18n="pillar1_title">Technical Problem Solving</h3>
+                  <p data-i18n="pillar1_desc">In-depth root cause analysis for hardware, OS, networking, and software
+                    applications.</p>
+                </div>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon blue">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                  </svg>
+                </div>
+                <div class="pillar-content">
+                  <h3 data-i18n="pillar2_title">Multilingual Support (EN / TR)</h3>
+                  <p data-i18n="pillar2_desc">Fluent verbal and written communication in English & Turkish for
+                    international enterprise clients.</p>
+                </div>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon emerald">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                  </svg>
+                </div>
+                <div class="pillar-content">
+                  <h3 data-i18n="pillar3_title">Software & Web Background</h3>
+                  <p data-i18n="pillar3_desc">Applied understanding of modern web architectures, API lifecycles, and
+                    database structures.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills & Tech Stack Section -->
+      <section id="skills" class="content-section">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-tag" data-i18n="skills_tag">Skills & Competencies</span>
+            <h2 class="section-title" data-i18n="skills_title">Core Technical & Professional Expertise</h2>
+            <p class="section-desc" data-i18n="skills_desc">A comprehensive blend of technical troubleshooting, software
+              development, and customer operations.</p>
+          </div>
+
+          <div class="skills-grid">
+            <!-- Skill Category 1 -->
+            <div class="skill-category-card">
+              <div class="skill-card-header">
+                <div class="skill-category-icon cyan">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                    <line x1="8" y1="21" x2="16" y2="21" />
+                    <line x1="12" y1="17" x2="12" y2="21" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 data-i18n="skill_cat1_title">Technical Support</h3>
+                  <span data-i18n="skill_cat1_sub">Diagnostics & Infrastructure</span>
+                </div>
+              </div>
+              <ul class="skill-list">
+                <li><span class="bullet-dot cyan"></span><span data-i18n="skill1_1">Hardware & Software
+                    Troubleshooting</span></li>
+                <li><span class="bullet-dot cyan"></span><span data-i18n="skill1_2">Ticketing Systems (Jira, ServiceNow,
+                    Zendesk)</span></li>
+                <li><span class="bullet-dot cyan"></span><span data-i18n="skill1_3">Mobile, Tablet & IoT Device
+                    Support</span></li>
+                <li><span class="bullet-dot cyan"></span><span data-i18n="skill1_4">Remote Desktop & Diagnostics
+                    Tools</span></li>
+                <li><span class="bullet-dot cyan"></span><span data-i18n="skill1_5">Call Center & Multi-Tier Support
+                    Ops</span></li>
+                <li><span class="bullet-dot cyan"></span><span data-i18n="skill1_6">SLA Management & Incident
+                    Escalation</span></li>
+              </ul>
+            </div>
+
+            <!-- Skill Category 2 -->
+            <div class="skill-category-card">
+              <div class="skill-card-header">
+                <div class="skill-category-icon blue">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 data-i18n="skill_cat2_title">Web & Programming</h3>
+                  <span data-i18n="skill_cat2_sub">Code, Platforms & Databases</span>
+                </div>
+              </div>
+              <ul class="skill-list">
+                <li><span class="bullet-dot blue"></span><span data-i18n="skill2_1">C# and Object-Oriented
+                    Programming</span></li>
+                <li><span class="bullet-dot blue"></span><span data-i18n="skill2_2">ASP.NET Framework & Web
+                    Architecture</span></li>
+                <li><span class="bullet-dot blue"></span><span data-i18n="skill2_3">JavaScript (ES6+), DOM & Async
+                    Logic</span></li>
+                <li><span class="bullet-dot blue"></span><span data-i18n="skill2_4">HTML5, Modern CSS3 & Responsive
+                    UI</span></li>
+                <li><span class="bullet-dot blue"></span><span data-i18n="skill2_5">Web Maintenance, Hosting &
+                    Deployment</span></li>
+                <li><span class="bullet-dot blue"></span><span data-i18n="skill2_6">Relational Databases & SQL
+                    Queries</span></li>
+              </ul>
+            </div>
+
+            <!-- Skill Category 3 -->
+            <div class="skill-category-card">
+              <div class="skill-card-header">
+                <div class="skill-category-icon purple">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 data-i18n="skill_cat3_title">Soft Skills & Ops</h3>
+                  <span data-i18n="skill_cat3_sub">Communication & Relations</span>
+                </div>
+              </div>
+              <ul class="skill-list">
+                <li><span class="bullet-dot purple"></span><span data-i18n="skill3_1">Customer Relationship Management
+                    (CRM)</span></li>
+                <li><span class="bullet-dot purple"></span><span data-i18n="skill3_2">Fluent English Communication &
+                    Reporting</span></li>
+                <li><span class="bullet-dot purple"></span><span data-i18n="skill3_3">Active Listening &
+                    De-escalation</span></li>
+                <li><span class="bullet-dot purple"></span><span data-i18n="skill3_4">Analytical Thinking & Problem
+                    Solving</span></li>
+                <li><span class="bullet-dot purple"></span><span data-i18n="skill3_5">Cross-Functional Team
+                    Collaboration</span></li>
+                <li><span class="bullet-dot purple"></span><span data-i18n="skill3_6">Process Documentation & Knowledge
+                    Base</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work Experience Section -->
+      <section id="experience" class="content-section">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-tag" data-i18n="exp_tag">Career History</span>
+            <h2 class="section-title" data-i18n="exp_title">Work Experience</h2>
+            <p class="section-desc" data-i18n="exp_desc">A track record of delivering technical excellence and customer
+              satisfaction.</p>
+          </div>
+
+          <div class="timeline">
+            <!-- Experience Item 1 -->
+            <div class="timeline-item">
+              <div class="timeline-marker cyan"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="role-title" data-i18n="exp1_role">Technical Support Specialist</h3>
+                    <div class="company-name">
+                      <span>Teleperformance</span>
+                      <span class="work-type-pill" data-i18n="work_remote">Remote</span>
+                    </div>
+                  </div>
+                  <div class="period-badge" data-i18n="exp1_period">Nov 2024 — Present</div>
+                </div>
+                <p class="timeline-desc" data-i18n="exp1_desc">
+                  Delivering high-quality remote technical support and resolving complex customer issues efficiently.
+                  Analyzing software, hardware, and account problems while maintaining strict SLA metrics and high CSAT
+                  ratings.
+                </p>
+                <div class="tag-group">
+                  <span class="tag" data-i18n="tag_remote_support">Remote Support</span>
+                  <span class="tag" data-i18n="tag_incident_res">Incident Resolution</span>
+                  <span class="tag" data-i18n="tag_ticketing">Ticketing Systems</span>
+                  <span class="tag" data-i18n="tag_cust_advocacy">Customer Advocacy</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Experience Item 2 -->
+            <div class="timeline-item">
+              <div class="timeline-marker blue"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="role-title" data-i18n="exp2_role">Sales & Operations Support</h3>
+                    <div class="company-name">
+                      <span>Karaca Kesici Aletler</span>
+                      <span class="work-type-pill" data-i18n="work_onsite">On-site</span>
+                    </div>
+                  </div>
+                  <div class="period-badge" data-i18n="exp2_period">Aug 2023 — Present</div>
+                </div>
+                <p class="timeline-desc" data-i18n="exp2_desc">
+                  Managing end-to-end customer support operations, market analysis, and sales execution. Coordinating
+                  order pipelines, managing client queries, and ensuring operational synchronization across fulfillment
+                  teams.
+                </p>
+                <div class="tag-group">
+                  <span class="tag" data-i18n="tag_ops_management">Operations Management</span>
+                  <span class="tag" data-i18n="tag_market_analysis">Market Analysis</span>
+                  <span class="tag" data-i18n="tag_crm">CRM Systems</span>
+                  <span class="tag" data-i18n="tag_client_rel">Client Relations</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Experience Item 3 -->
+            <div class="timeline-item">
+              <div class="timeline-marker purple"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="role-title" data-i18n="exp3_role">Web & Technical Specialist</h3>
+                    <div class="company-name">
+                      <span>Turc Export</span>
+                    </div>
+                  </div>
+                  <div class="period-badge" data-i18n="exp3_period">Sep 2020 — Jul 2023</div>
+                </div>
+                <p class="timeline-desc" data-i18n="exp3_desc">
+                  Managed the organization's web platform, improved user experience, and maintained web systems. Handled
+                  content updates, system troubleshooting, platform reliability, and technical customer inquiries.
+                </p>
+                <div class="tag-group">
+                  <span class="tag" data-i18n="tag_web_maint">Web Maintenance</span>
+                  <span class="tag" data-i18n="tag_ui_ux">UI/UX Optimization</span>
+                  <span class="tag">HTML/CSS/JS</span>
+                  <span class="tag" data-i18n="tag_platform_admin">Platform Administration</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Experience Item 4 -->
+            <div class="timeline-item">
+              <div class="timeline-marker emerald"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="role-title" data-i18n="exp4_role">Technical Support Specialist</h3>
+                    <div class="company-name">
+                      <span>Conduent</span>
+                    </div>
+                  </div>
+                  <div class="period-badge" data-i18n="exp4_period">Sep 2017 — Oct 2018</div>
+                </div>
+                <p class="timeline-desc" data-i18n="exp4_desc">
+                  Provided English-language hardware and software support for smartphones, tablets, and electronic
+                  devices. Guided international consumers through troubleshooting protocols and escalated hardware
+                  repairs.
+                </p>
+                <div class="tag-group">
+                  <span class="tag" data-i18n="tag_hw_troubleshoot">Hardware Troubleshooting</span>
+                  <span class="tag" data-i18n="tag_mobile_support">Mobile & Tablet Support</span>
+                  <span class="tag" data-i18n="tag_en_support">English Support (EN)</span>
+                  <span class="tag" data-i18n="tag_diagnostics">Technical Diagnostics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education & Qualifications Section -->
+      <section id="education" class="content-section">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-tag" data-i18n="edu_tag">Academic Background</span>
+            <h2 class="section-title" data-i18n="edu_title">Education & Qualifications</h2>
+          </div>
+
+          <div class="education-card">
+            <div class="edu-top">
+              <div class="edu-icon-badge">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
+              </div>
+              <div class="edu-info">
+                <h3 class="edu-degree" data-i18n="edu_degree">Associate Degree in Computer Programming</h3>
+                <div class="edu-school" data-i18n="edu_school">Piri Reis University</div>
+              </div>
+              <div class="edu-gpa-badge">
+                <span class="gpa-label" data-i18n="gpa_label">Graduation GPA</span>
+                <span class="gpa-value">3.36 / 4.00</span>
+              </div>
+            </div>
+
+            <div class="edu-highlights">
+              <div class="highlight-item">
+                <div class="highlight-title" data-i18n="edu_hl1_title">Software Development</div>
+                <p data-i18n="edu_hl1_desc">Algorithms, Object-Oriented Programming (C#), web development lifecycles,
+                  and software architecture.</p>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-title" data-i18n="edu_hl2_title">Database Management</div>
+                <p data-i18n="edu_hl2_desc">Relational Database Design (RDBMS), SQL query optimization, table schemas,
+                  and data integrity.</p>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-title" data-i18n="edu_hl3_title">Information Systems & Hardware</div>
+                <p data-i18n="edu_hl3_desc">Computer hardware architectures, networking fundamentals, operating systems,
+                  and system security.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="content-section">
+        <div class="section-container">
+          <div class="section-header text-center">
+            <span class="section-tag" data-i18n="contact_tag">Get in Touch</span>
+            <h2 class="section-title" data-i18n="contact_title">Let's Connect & Work Together</h2>
+            <p class="section-desc" data-i18n="contact_desc">Open for opportunities in Technical Support, Customer
+              Operations, and IT Support roles.</p>
+          </div>
+
+          <div class="contact-grid">
+            <!-- Direct Info -->
+            <div class="contact-info-card">
+              <h3 data-i18n="contact_info_heading">Contact Information</h3>
+              <p data-i18n="contact_info_sub">Feel free to reach out for career opportunities, technical collaborations,
+                or consulting questions.</p>
+
+              <div class="contact-details">
+                <!-- Email: mrtkrc41@gmail.com -->
+                <div class="contact-item">
+                  <div class="contact-icon cyan">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                      <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="contact-label" data-i18n="contact_label_email">Email Address</span>
+                    <a href="mailto:mrtkrc41@gmail.com" class="contact-value">mrtkrc41@gmail.com</a>
+                  </div>
+                </div>
+
+                <!-- GitHub: https://github.com/MertKRC -->
+                <div class="contact-item">
+                  <div class="contact-icon blue">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="contact-label">GitHub</span>
+                    <a href="https://github.com/MertKRC" target="_blank" rel="noopener noreferrer"
+                      class="contact-value">github.com/MertKRC</a>
+                  </div>
+                </div>
+
+                <!-- LinkedIn: https://www.linkedin.com/in/mertkrc/ -->
+                <div class="contact-item">
+                  <div class="contact-icon purple">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="contact-label">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/mertkrc/" target="_blank" rel="noopener noreferrer"
+                      class="contact-value">linkedin.com/in/mertkrc</a>
+                  </div>
+                </div>
+
+                <!-- Location -->
+                <div class="contact-item">
+                  <div class="contact-icon emerald">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="contact-label" data-i18n="contact_label_location">Location</span>
+                    <span class="contact-value" data-i18n="contact_val_location">Kocaeli, Türkiye</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-card">
+              <form id="contact-form" class="contact-form" action="mailto:mrtkrc41@gmail.com" method="POST"
+                enctype="text/plain">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name" data-i18n="form_label_name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required
+                      data-i18n-placeholder="form_ph_name">
+                  </div>
+                  <div class="form-group">
+                    <label for="email" data-i18n="form_label_email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required
+                      data-i18n-placeholder="form_ph_email">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="subject" data-i18n="form_label_subject">Subject</label>
+                  <input type="text" id="subject" name="subject" placeholder="Role Opportunity / Collaboration" required
+                    data-i18n-placeholder="form_ph_subject">
+                </div>
+                <div class="form-group">
+                  <label for="message" data-i18n="form_label_message">Message</label>
+                  <textarea id="message" name="message" rows="4" placeholder="Hello Mert, I would like to discuss..."
+                    required data-i18n-placeholder="form_ph_message"></textarea>
+                </div>
+                <button type="submit" class="btn-submit" id="submit-btn">
+                  <span data-i18n="form_btn_send">Send Message</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+                <div id="form-feedback" class="form-feedback"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="footer-container">
+          <div class="footer-left">
+            <div class="footer-brand">Mert Karaca</div>
+            <p data-i18n="footer_role">Customer Support & Technical Operations Specialist</p>
+          </div>
+
+          <div class="footer-right">
+            <a href="#home" class="back-to-top">
+              <span data-i18n="btn_back_to_top">Back to Top</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="12" y1="19" x2="12" y2="5"></line>
+                <polyline points="5 12 12 5 19 12"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span data-i18n="footer_copyright">© 2026 Mert Karaca. All rights reserved.</span>
+          <span data-i18n="footer_tagline">Designed with Smooth Scroll & Modern Web Stack</span>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
