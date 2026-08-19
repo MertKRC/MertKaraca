@@ -118,8 +118,7 @@
       btn_download_apk: "APK İndir",
       footer_role: "Müşteri Desteği & Teknik Operasyonlar Uzmanı",
       btn_back_to_top: "Yukarı Çık",
-      footer_copyright: "© 2026 Mert Karaca. Tüm hakları saklıdır.",
-      footer_tagline: "Smooth Scroll & Modern Web Teknolojileri ile Tasarlandı"
+      footer_copyright: "© 2026 Mert Karaca. Tüm hakları saklıdır."
     }
   };
 
@@ -164,8 +163,27 @@
   }, { passive: true });
 
   // Mobile menu toggle
+  const allNavLinks = document.querySelectorAll('.nav-link');
   if (mobileToggle && navLinks) {
-    mobileToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = navLinks.classList.toggle('open');
+      mobileToggle.classList.toggle('is-active', isOpen);
+    });
+
+    allNavLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        mobileToggle.classList.remove('is-active');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !mobileToggle.contains(e.target)) {
+        navLinks.classList.remove('open');
+        mobileToggle.classList.remove('is-active');
+      }
+    });
   }
 
   // ==========================================================================

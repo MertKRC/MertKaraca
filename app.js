@@ -138,7 +138,6 @@
       footer_role: "Customer Support & Technical Operations Specialist",
       btn_back_to_top: "Back to Top",
       footer_copyright: "© 2026 Mert Karaca. All rights reserved.",
-      footer_tagline: "Designed with Smooth Scroll & Modern Web Stack",
       form_sending: "Sending...",
       form_sent: "Message Sent!",
       form_success_msg: "Thank you, your message has been received! Mert will get back to you shortly."
@@ -267,7 +266,6 @@
       footer_role: "Müşteri Desteği & Teknik Operasyonlar Uzmanı",
       btn_back_to_top: "Yukarı Çık",
       footer_copyright: "© 2026 Mert Karaca. Tüm hakları saklıdır.",
-      footer_tagline: "Smooth Scroll & Modern Web Teknolojileri ile Tasarlandı",
       form_sending: "Gönderiliyor...",
       form_sent: "Mesaj Gönderildi!",
       form_success_msg: "Teşekkürler, mesajınız başarıyla iletildi! Mert en kısa sürede size dönüş yapacaktır."
@@ -485,14 +483,24 @@
   window.addEventListener('scroll', handleScrollEffects, { passive: true });
 
   if (mobileToggle && navLinks) {
-    mobileToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = navLinks.classList.toggle('open');
+      mobileToggle.classList.toggle('is-active', isOpen);
     });
 
     allNavLinks.forEach((link) => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
+        mobileToggle.classList.remove('is-active');
       });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !mobileToggle.contains(e.target)) {
+        navLinks.classList.remove('open');
+        mobileToggle.classList.remove('is-active');
+      }
     });
   }
 
